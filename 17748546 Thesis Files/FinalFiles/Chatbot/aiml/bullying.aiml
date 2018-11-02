@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- -->
+<!--  Project "Nao robot as a Therapist for Children with autism "  -->
+<!--  Using Document "Specialist Peer Mentoring Module"   -->
+<!--  Chapter "Recommended Methods Of Communication"  -->
+<!--  Sub Chapter "Active/Reflective Listening"-->
+<!--  -> feedback what they hear to the speaker -->
+<!--  -> re-stating or paraphrasing what they have heard in their own words -->
+<!--  -> confirm the understanding of both parties -->
+<!--  -> No judgement -->
+<!--  -> Empathy -->
+<!--  -> Encourage them to speak openly -->
+<!--  Using Document "The New Social Story Book"   -->
+<!--  Chapter "Bullying: What to think, Say and Do"   -->
+<!-- Last modified 01/03/2018 -->
+<!-- -->
+
+
+<!-- I AM VERY UPSET ABOUT HOW MY * IS TREATING ME AT *-->
+
+<category><pattern>BULLYINGPRIMER</pattern>
+	<template>Do you want me to explain what bullying is</template></category>
+
+<category><pattern>MY _ TROUBLES ME AT _</pattern>
+	<template><srai>I AM VERY UPSET ABOUT HOW MY <star index="1"/> IS TREATING ME AT <star index="2"/></srai></template></category>
+	
+<category><pattern>_ MY * TROUBLES ME</pattern>
+	<template><srai>I AM VERY UPSET ABOUT HOW MY <star index="1"/> IS TREATING ME AT HOME</srai></template></category>
+	
+<category><pattern>MY * BULLIES ME</pattern>
+	<template><srai>I AM VERY UPSET ABOUT HOW MY <star index="1"/> IS TREATING ME AT HOME</srai></template></category>
+
+<category><pattern>MY * BULLIES ME AT *</pattern>
+	<template><srai>I AM VERY UPSET ABOUT HOW MY <star index="1"/> IS TREATING ME AT <star index="2"/></srai></template></category>
+	
+	
+<category><pattern>MY * TROUBLES ME</pattern>
+	<template><srai>I AM VERY UPSET ABOUT HOW MY <star index="1"/> IS TREATING ME AT HOME</srai></template></category>
+	
+<category><pattern>I AM VERY UPSET ABOUT HOW MY * IS TREATING ME AT *</pattern>
+<template>
+	<random>
+	<li>It sounds like <star index="2"/> life is very difficult for you at the moment.</li> 
+	<li>From what you have said it seems like it is hard for you to gain the right sort of support from your <star index="1"/>.</li> 
+	<!-- <li>How do you feel about that situation?</li> 
+	<li>What sort of support would you like?</li> -->
+	</random>
+	Do you want me to explain you what is bullying
+</template>
+</category>
+
+<category><pattern>YES</pattern>
+	<that>* WHAT BULLYING IS</that>
+	<template>
+		<srai>WHAT IS BULLYING</srai> 
+		Do you want me to explain you which person try to bully other person?
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* WHAT BULLYING IS</that>
+	<template>
+		Do you want me to explain you which person try to bully other person? 
+	</template>
+</category>
+
+<category><pattern>YES</pattern>
+	<that>* WHICH PERSON TRY TO BULLY OTHER PERSON</that>
+	<template>
+		<srai>WHICH PERSON TRY TO BULLY OTHERS</srai>
+		I can tell you who can help you, do you want to know?
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* WHICH PERSON TRY TO BULLY OTHER PERSON</that>
+	<template>
+		I can tell you who can help you, do you want to know?
+	</template>
+</category>
+
+<category><pattern>YES</pattern>
+	<that>* WHO CAN HELP YOU _</that>
+	<template>
+		<srai>WHO CAN HELP ME</srai>
+		I can tell you what to think during a bullying attempt, do you want to know?
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* WHO CAN HELP YOU _</that>
+	<template>
+		I can tell you what to think during a bullying attempt, do you want to know?
+	</template>
+</category>
+
+<category><pattern>YES</pattern>
+	<that>* WHAT TO THINK DURING A BULLYING ATTEMPT _</that>
+	<template>
+		<srai>WHAT TO THINK IN RESPONSE TO A BULLYING ATTEMPT</srai>
+		I can tell you what to say in response to a bullying attempt and how to say it, do you want to know?
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* WHAT TO THINK DURING A BULLYING ATTEMP _</that>
+	<template>
+		I can tell you what to say in response to a bullying attempt and how to say it, do you want to know?
+	</template>
+</category>
+
+<category><pattern>YES</pattern>
+	<that>* WHAT TO SAY IN RESPONSE TO A BULLYING ATTEMPT AND HOW TO SAY IT DO YOU WANT TO KNOW</that>
+	<template>
+		In response to a bullying attempt, you should say one sentence well. Knowing what to say and how to say it helps a student use good self-control.
+		Do you want to know what sentences you can say in response to a bullying attempt?
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* WHAT TO SAY IN RESPONSE TO A BULLYING ATTEMPT AND HOW TO SAY IT _</that>
+	<template>
+		I can tell you what to do in response to a bullying attempt, do you want to know?
+	</template>
+</category>
+
+<category><pattern>YES</pattern>
+	<that>* WHAT SENTENCES YOU CAN SAY IN RESPONSE TO A BULLYING ATTEMPT</that>
+	<template>
+		<srai>WHAT SENTENCE CAN I SAY IN RESPONSE TO A BULLYING ATTEMPT</srai>
+		Do you want to know how to say my sentence in response to a bullying attempt?
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* WHAT SENTENCES YOU CAN SAY IN RESPONSE TO A BULLYING ATTEMPT</that>
+	<template>
+		Do you want to know how to say my sentence in response to a bullying attempt?
+	</template>
+</category>
+
+<category><pattern>YES</pattern>
+	<that>* HOW TO SAY MY SENTENCE IN RESPONSE TO A BULLYING ATTEMPT</that>
+	<template>
+		<srai>HOW TO SAY MY SENTENCE IN RESPONSE TO A BULLYING ATTEMPT</srai>
+		I can tell you what to do in response to a bullying attempt, do you want to know?
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* HOW TO SAY MY SENTENCE IN RESPONSE TO A BULLYING ATTEMPT</that>
+	<template>
+		I can tell you what to do in response to a bullying attempt, do you want to know?
+	</template>
+</category>
+
+<category><pattern>YES</pattern>
+	<that>* WHAT TO DO IN RESPONSE TO A BULLYING ATTEMPT _</that>
+	<template>
+		<srai>WHAT TO DO IN RESPONSE TO A BULLYING ATTEMPT</srai>
+		I can tell you what to report after a bullying attempt, do you want to know?
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* WHAT TO DO IN RESPONSE TO A BULLYING ATTEMPT _</that>
+	<template>
+		I can tell you what to report after a bullying attempt, do you want to know?
+	</template>
+</category>
+		
+<category><pattern>YES</pattern>
+	<that>* WHAT TO REPORT _</that>
+	<template>
+		<srai>WHAT TO REPORT</srai>
+		I can tell you how to report, do you want to know?
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* WHAT TO REPORT _</that>
+	<template>
+		I can tell you how to report, do you want to know?
+	</template>
+</category>
+	
+<category><pattern>YES</pattern>
+	<that>* HOW TO REPORT _</that>
+	<template>
+		<srai>HOW TO REPORT </srai>
+	</template>
+</category>
+
+<category><pattern>NO</pattern>
+	<that>* HOW TO REPORT _</that>
+	<template>
+		I cannot help you more, I'm sorry. You can also ask aldults for more help.
+	</template>
+</category>
+
+
+<!-- text from book social stories -->
+<category><pattern>WHAT IS BULLYING</pattern>
+	<template>
+		
+		<!--<xhtml:script
+			xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        	src="testJs.js"
+        	type="application/javascript"/> -->
+		
+		Some students try to bully others by making them feel uncomfortable, frightened, or sad.
+		They try to bully students who are smaller or who have less power. How can I know if someone is trying to bully me? 
+		It may be bullying if someone says something to me that is not kind, not true, or frightening, calls me by a name that is not mine, or that is unkind, 
+		writes messages that are not kind or that frighten me, hurts my body; for example, hits, trips, kicks, shoves, or pushes me, tells other students not to talk or play with me,
+		asks me to do something that I know an adult would not ask, or want me to do, tells me to give them money, and not to tell an adult about it or even makes the same or similar mistake many times, over and over.
+		There are many other ways that a student may bully, too. No one can predict exactly when someone may try to bully another person. 
+		No one can predict exactly what a student may do in a bullying attempt. What we do know is that students who bully are out of control.
+		It's important to know what to think, say, and do if someone tries to bully me. 
+		That way, I will be ready whatever the student who bullies tries to do.
+	</template>
+</category>
+
+<category><pattern>WHICH PERSON TRY TO BULLY OTHERS</pattern>
+	<template>
+		Bullying can be very confusing. Getting more information can help. A person who bullies may be a boy or a girl. 
+		A person who bullies may be older or younger than me. He may be alone or with others. He may do something that makes other students laugh or do something that causes an adult to feel upset or angry 
+		or do something that I know is wrong, or that I guess may be wrong or use an unkind face and words or even use a friendly face and confusing words.
+		If I feel confused or have questions about bullying, it’s a smart decision to get more information from adults. Adults were children many years ago. 
+		They remember students who bullied them. An adult can help me decide if someone is trying to bully me.
+	</template>
+</category>
+
+<category><pattern>WHO CAN HELP ME</pattern>
+	<template>
+		I know some adults who are concerned about bullying. They are on My Team. My Team will work with me to make sure my school and neighborhood are safe and comfortable. 
+		I am an important member of the team. We work together. Sometimes, a student may try to bully me when My Team is not around. 
+		Sometimes, a student may try to bully me when a member of My Team is near, but does not see the bullying. I can learn how to respond to a student who bullies. 
+		I can learn what to think, say, and do. When a student tries to bully someone, it is called a bullying attempt. 
+		Reading Stories number 79-81 and completing all activities will help us to fill in the blanks on the following page about what to think, say, and do in response to a bullying attempt. 
+		My Team is doing many things to make my school a comfortable and safe place for all students. They have been busy studying and learning new ways to respond to bullying. 
+		Even adults have to learn new skills. Later in this chapter, My Team will write a list of what they have learned. 
+		They will also write a list of what they are doing to keep our school and neighborhood safe and comfortable for all students.
+	</template>
+</category>
+		
+<category><pattern>WHAT TO THINK IN RESPONSE TO A BULLYING ATTEMPT</pattern>
+	<template>
+		You can calmly think about my bullying facts:
+		Facts are true. Thinking about the bullying facts may help a student stay calm. 
+		If I am bullied, thinking about the bullying facts may help me use good self-control. 
+		There are many bullying facts. Here are three of them:
+		1, It is not my fault that I am the target of this bullying attempt.
+		2, The student who is attempting to bully me is out of control.
+		3, I am not the only student who is bullied.
+		I have a choice. I may choose one, two, or all three facts to memorize and write it in the thought symbol on the next page.
+		You can also calmly think about a peaceful picture.
+		If I am bullied, thinking of a peaceful picture may help me stay calm and in good self-control.
+		I may choose or draw a peaceful picture to put in my thought symbol.
+	</template>
+</category>
+
+<category><pattern>WHAT SENTENCE CAN I SAY IN RESPONSE TO A BULLYING ATTEMPT</pattern>
+	<template>
+		I know three examples of sentences you can say. I may choose one of these sentences. 
+		I will try to choose the one sentence that is the most true for me and the easiest for me to say. 
+		This one sentence is what I will try to say in response to a bullying attempt. I can say “I hear you.” or “I need you to stop.” or even “I don’t like that; stop it.”.
+		I have a choice. When I say my one sentence, the student who bullies may keep talking. This can happen when a student is out of control. I have said my one sentence. 
+		I am finished. It’s time to go. It is right to leave a bullying attempt, even if the student who bullies is still talking. This keeps me mistake-free and in good self-control.
+	</template>
+</category>
+
+<category><pattern>HOW TO SAY MY SENTENCE IN RESPONSE TO A BULLYING ATTEMPT</pattern>
+	<template>
+		I have facts and a picture to think about to help me stay calm. I have one sentence to say. 
+		As I say the sentence, I will try to Keep all parts of my body to myself, Stand straight with my head up, Use a steady in-control voice, Keep a safe distance and Walk away after one sentence.
+		Knowing what to say and how to say it takes practice. A member of My Team can help me practice.
+	</template>
+</category>
+	
+<category><pattern>WHAT TO DO IN RESPONSE TO A BULLYING ATTEMPT</pattern>
+	<template>
+		There are three steps to response a bullying attempt. 
+		Step 1 is to calmly think about my bullying facts and calmly think about a peaceful picture. If you want to learn more about it, you can ask me "What to think in response to a bullying attempt".
+		Step 2 is to say one sentence well. If you want to learn about it, you can ask me "What to say in response to a bullying attempt and how to say it".
+		Step 3 is to report the bullying attempt to a member of My Team. Knowing why a report is important, what to report, how to report it, and whom to give my report to helps me stay in good self-control.
+	</template>
+</category>
+
+<category><pattern>WHAT TO REPORT </pattern>
+	<template>
+		Like news reporters, it is important for all students to learn how to carefully report bullying information to adults.
+		A good report will include where the bullying attempt occurred, when the bullying attempt occurred, who made the bullying attempt and what was said and done during the bullying attempt.
+	</template>
+</category>
+
+<category><pattern>HOW TO REPORT </pattern>
+	<template> 	
+		My Team and I will make a plan for reporting that is immediate, factual, and that works well for everyone on the team.
+		The best reports of bullying attempts occur right after the attempt happens. That way, it is easiest to remember the facts to describe the bullying attempt. 
+		This is very important. The best reports of bullying attempts are factual. A factual report uses true sentences to describe where the bullying attempt occurred, when the bullying attempt occurred, 
+		who made the bullying attempt, and what was said and/or done. A student leaves a bullying attempt and tries to immediately make a factual report to a team member.
+		The first part of the plan is deciding how a student will report bullying attempts to the Team.
+		Some students talk with a Team member to report a bullying attempt. Some students write to a Team member to report. 
+		Some students report bullying attempts by using a reporting form. Every Team has its own best plan.
+		This completes the first part of our plan. The second part of our plan is deciding who receives my report. Each adult member of My Team knows how to help when I have a report. 
+		Sometimes, one member of My Team may be sick or in another place. This is okay. There are other members of the Team. They are listed in order. 
+		I will try to give my report to the Team member at the top of the list. If that person is not nearby, then I will try to report to the Team member on the next line, and so on. 
+		It is important to report to a member of My Team.
+	</template>
+</category>
+</aiml>

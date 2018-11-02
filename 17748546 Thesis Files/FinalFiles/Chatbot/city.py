@@ -1,0 +1,1 @@
+cities = ["perth", "melbourne", "sydney", "camberra", "brisbane", "darwin", "adelaide"]

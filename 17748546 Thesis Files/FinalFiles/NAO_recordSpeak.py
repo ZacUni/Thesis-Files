@@ -1,0 +1,76 @@
+from naoqi import ALProxy
+import sys
+import time
+import os
+
+ip = sys.argv[1]
+
+class AudioRecord(object):
+    def __init__(self):
+        try:
+            self.ad = ALProxy("ALAudioDevice", ip, 9559)
+        except Exception as e:
+            self.ad = None
+            print("ERROR: Nothing created")
+        self.filepath = ""
+
+
+    def onInput_onStart(self, p):
+        sExtension = ".wav"
+        self.filepath = p + sExtension
+        if self.ad:
+            self.ad.startMicrophonesRecording( self.filepath )
+            print("\033[1;32mDEBUG: Start Recording\033[0m") 
+            time.sleep(5)
+            self.ad.stopMicrophonesRecording()
+            print("\033[1;31mDEBUG: Stop Recording \033[0m \033[2;33m" + self.filepath + "\033[0m") 
+            
+        else:
+            print("No sound recorded")
+
+class TextToSpeech(object):
+    def __init__(self):
+        ip = sys.argv[1]
+        self.tts = ALProxy("ALTextToSpeech", ip, 9559)
+
+        
+
+    def getText(self):
+        filePath = "/var/persistent/home/nao/recordings/microphones/"
+        fileName = "textToSend.txt"
+        sendBool = False
+
+        print("\033[1;5;36;52mWaiting for file...\033[0m")
+
+        while(not sendBool):
+            try:
+                file = open(os.path.join(filePath,fileName), "r")
+                print("++ T2S - File opened ++")
+                for line in file:
+                    if(len(line)):
+                        print("++ T2S - inside for ++")
+                        textOutput = line
+                        print("\033[33m Text Said: " + textOutput + "\033[33m")
+                        self.tts.say(textOutput)
+                    else:
+                        print("++ T2S - File contains nothing ++")
+
+                sendBool = True
+                file.close()
+                try:
+                    os.remove(os.path.join(filePath,fileName))
+                    print("++ T2S - File removed ++")
+                except OSError:
+                    print("File could not be removed")
+
+            except Exception:
+                pass
+           
+
+
+if __name__ == "__main__":
+    ad = AudioRecord()
+    tts = TextToSpeech()
+    path = '/var/persistent/home/nao/recordings/microphones/audioFile'
+    ad.onInput_onStart(path)
+    tts.getText()

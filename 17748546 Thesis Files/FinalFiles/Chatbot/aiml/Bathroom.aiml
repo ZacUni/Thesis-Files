@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- -->
+<!--  Project "Nao robot as a Therapist for   -->
+<!--  Children with autism "  -->
+<!--  Using Document "The New Social Story Book"   -->
+<!--  Chapter "Recommended Methods Of Communication"  -->
+<!--  In the Bathroom -->
+<!--   -->
+<!-- Last modified 28/02/2018 -->
+
+<category><pattern>BATHROOMPRIMER</pattern>
+	<template>Do you want to talk about flush? Or toilets? Or shower? Or washing hands?
+	Or toilet pipes and waste treatment plants? Or sit on a toilet?</template></category>
+
+<category><pattern>I WANT TO TALK ABOUT BATHROOM</pattern>
+	<template>Alright <get name="name"/> <set name = "topic">bathroom</set>
+		Do you want to talk about flush? Or toilets? Or shower? Or washing hands? Or toilet pipes and waste treatment plants? Or sit on a toilet?
+	</template>
+</category>
+
+<!--Answer is in Robot and then leed back to the social story in this file-->
+<category><pattern>FLUSH</pattern>
+	<template>
+		<random>
+			<li>Do you want to know what a flush is for</li>
+			<li>Do you want to know why to use the flush</li>
+		</random>
+	</template>
+</category>
+<category><pattern>* FLUSH</pattern>
+	<template><srai>FLUSH</srai></template></category>
+
+<category><pattern>TOILETS</pattern>
+	<template>
+		<random>
+		<li>Do you want to know what a toilet is</li>
+		<li>Do you want to learn why do people have toilets</li>
+		</random>
+	</template></category>
+<category><pattern>* TOILETS</pattern>
+	<template><srai>TOILETS</srai></template></category>
+
+<category><pattern>SHOWER</pattern>
+	<template>Do you want to learn how to take a shower</template></category>
+<category><pattern>* SHOWER</pattern>
+	<template><srai>SHOWER</srai></template></category>
+
+<category><pattern>I HATE TAKING A SHOWER</pattern>
+<template>Do you want to learn how to take a shower</template>
+</category>
+
+<category><pattern>WASHING HANDS</pattern>
+	<template>	
+		<random>
+			<li>Do you want to learn how to wash your hands</li>
+			<li>Do you want to learn why to wash your hands</li>
+		</random>
+	</template>
+</category>
+<category><pattern>* WASHING HANDS</pattern>
+	<template><srai>WASHING HANDS</srai></template></category>
+
+<category><pattern>SIT ON A TOILET</pattern>
+	<template>
+		<random>
+			<li>Do you want me to explain you why is it safe to sit on a toilet</li>
+			<li>Do you want me to explain you that a toilet is not a chair</li>
+		</random>
+	</template>
+</category>
+<category><pattern>* SIT ON A TOILETS</pattern>
+	<template><srai>SIT ON A TOILETS</srai></template></category>
+
+<topic name="bathroom">
+<category><pattern>WHATS MORE</pattern>
+	<template>Okay!
+		<random>
+			<li>Do you want to know what a toilet is?</li>
+			<li>Do you want to know what a flush is for?</li>
+			<li>Do you want to learn more about toilet pipes and waste treatment plants?</li>
+			<li>Do you want to learn how to wash your hands?</li>
+			<li>Do you want to learn why to wash your hands?</li>
+			<li>Do you want to know why to use the flush?</li>
+			<li>Do you want me to explain you why is it safe to sit on a toilet.</li>
+			<li>Do you want me to explain you that a toilet is not a chair?</li>
+			<li>Do you want to learn how to take a shower?</li>
+			<li>Do you want to learn why do people have toilets?</li>
+		</random>
+	</template>
+</category>
+
+<category><pattern>TELL ME MORE</pattern>
+	<template><srai>WHATS MORE</srai></template></category>
+</topic>
+<category><pattern>I DON'T LIKE TO WASH MYSELF</pattern>
+<template>Do you want to learn how to take a shower?</template>
+</category>
+
+<category><pattern>WHY DO WE NEED TO WASH OURSELVES</pattern>
+<template>Do you want to learn how to take a shower?</template>
+</category>
+
+<category><pattern>I LOVE TAKING A SHOWER </pattern>
+<template>Do you want to learn how to take a shower?</template>
+</category>
+
+<category><pattern>I LOVE STAYING UNDER THE HOT WATER</pattern>
+<template>Do you want to learn how to take a shower?</template>
+</category>
+
+<category><pattern>THE SOAP HURTS MY EYES</pattern>
+<template>Do you want to learn how to take a shower?</template>
+</category>
+
+<category><pattern>WHAT IS SOAP?</pattern>
+<template>Soap is a substance used with water for washing and cleaning, made of a compound of natural oils or fats with sodium hydroxide or another strong alkali, and typically having perfume and colouring added. </template>
+</category>
+
+<category><pattern>WHAT IS A SHAMPOO</pattern>
+<template> Shampoo is a liquid preparation for washing the hair.</template>
+</category>
+
+<category><pattern>WHY DO WE NEED SOAP</pattern>
+<template>We need soap to wash efficiently our body. </template>
+</category>
+
+<category><pattern>WHY DO WE NEED SHAMPOO?</pattern>
+<template>We need shampoo to wash efficiently our hair. </template>
+</category>
+
+<category><pattern>I LOVE VERY HOT WATER ON ME</pattern>
+	<template>Do you want to learn how to take a shower
+	</template>
+</category>
+
+<!-- shower: Start -->
+<category>
+<pattern>YES</pattern>
+<that>DO YOU WANT TO LEARN HOW TO TAKE A SHOWER</that>
+	<template>
+		Many people use showers to get clean. Often, a person will say, “I’m going to take a shower.” That means, I am going to use the shower. Soon, I will be learning to take a shower.
+		What follows is a list of steps that many people follow	to take a shower at home. It is a list of what they do and why they do it.
+		TEN STEPS TO TAKE A SHOWER
+		• Go into the bathroom and close the door. Closing the door keeps a shower private.
+		• Take off clothes. This keeps clothes dry.
+		• Turn on the water and set a comfortable water temperature. If the water is too hot or	too cold, a shower is uncomfortable. (Hint: Some people use the bathtub faucet to
+		make sure the water temperature is comfortable, and then they send the water through the shower head.)
+		• Make sure the water is coming out through the shower head.
+		• Step carefully into the shower. Wet surfaces may be slippery.
+		• Wash hair with shampoo, rinse, apply conditioner, rinse. Shampoo is soap made just for washing hair. Conditioner makes hair easier to comb and style. Rinsing well after the
+		shampoo and conditioner is important for clean and comfortable hair and scalp.
+		• Wash skin with soap. This gets a body clean. Rinse. Rinsing well is important for clean and comfortable skin.
+		• When the shower is done, turn off the water. This saves water and energy.
+		• Use a towel to dry skin and hang up the towel. Dry skin makes clean clothes feel more comfortable. Hanging up the towel keeps the bathroom neat. It also prevents someone
+		from saying, “Hey, come back and hang up your towel.”
+		• Put on clean clothes. Carry dirty clothes out of the bathroom. This helps to keep a bathroom neat.
+		I may use this list as I am learning to take a shower. My mom and dad know how to take a shower. If I have questions about taking a shower, they will know the answer. With practice,
+		I may not need the list—or help from my mom and dad. I will have learned how to take a shower on my own!
+	</template>
+</category>
+<!-- shower: End -->
+
+<!-- Flush: Start -->
+<category>
+<!-- <pattern>WHY DO I USE THE FLUSH</pattern> -->
+<pattern>YES</pattern>
+<that>DO YOU WANT TO KNOW WHAT A FLUSH IS FOR</that>
+<template>People learn to use toilets to catch and hold their pee and poop. 
+They don’t need the pee and poop anymore, so they flush it away! 
+Flushing is how a toilet throws away pee and poop that is no longer needed. 
+Then the toilet is clear again. Flushing a toilet throws pee and (or) poop away. 
+Toilets are fixtures that are attached to a pipe. Pee and poop move through the pipe to a factory called a waste treatment plant. 
+In my house, toilets connect to pipes that lead to the waste treatment plant.</template>
+</category>
+
+<category>
+<!-- <pattern>WHY DO I USE THE FLUSH</pattern> -->
+<pattern>YES</pattern>
+<that>DO YOU WANT TO KNOW WHY TO USE THE FLUSH</that>
+<template>People learn to use toilets to catch and hold their pee and poop. 
+They don’t need the pee and poop anymore, so they flush it away! 
+Flushing is how a toilet throws away pee and poop that is no longer needed. 
+Then the toilet is clear again. Flushing a toilet throws pee and (or) poop away. 
+Toilets are fixtures that are attached to a pipe. Pee and poop move through the pipe to a factory called a waste treatment plant. 
+In my house, toilets connect to pipes that lead to the waste treatment plant.</template>
+</category>
+<!-- Flush: End -->
+
+<!-- sit: Start -->
+<category>
+<pattern>YES</pattern>
+<that>DO YOU WANT ME TO EXPLAIN YOU WHY IS IT SAFE TO SIT ON A TOILET</that>
+<template>It is safe for a child or adult to sit on a toilet.
+That’s good to know, because many people need to use toilets each day.
+The toilet seat is small enough to sit safely, with a hole that is big enough for pee or poop to pass through.
+A toilet seat is a safe place to sit, pee, and poop. </template>
+</category>
+
+<category>
+<pattern>I LOVE SIT ON A TOILET</pattern>
+<template>A toilet is not a chair, that’s for sure.
+A toilet is a fixture with a pipe that takes pee and poop to a waste treatment plant. 
+It has a safe seat with a space for pee and poop to pass through.
+A chair is a piece of furniture. It has a solid seat. 
+People use chairs for many reasons, but never to pee or poop.
+A toilet is definitely not a chair, anytime or anywhere! </template>
+</category>
+
+<category>
+<pattern>YES</pattern>
+<that>DO YOU WANT ME TO EXPLAIN YOU THAT A TOILET IS NOT A CHAIR</that>
+<template><srai>I LOVE SIT ON A TOILET</srai> </template>
+</category>
+<!-- sit: End -->
+
+<!-- toilets: Start -->
+<category><pattern>WHY TO WIPE THE BUTT</pattern>
+<template> ... </template>
+</category>
+
+<category>
+<pattern>YES</pattern>
+<that>DO YOU WANT TO KNOW WHAT A TOILET IS</that>
+<template>A toilet is a bathroom fixture. Each toilet has a bowl, seat, and lid.</template>
+</category>
+
+<category>
+<pattern>YES</pattern>
+<that>DO YOU WANT TO LEARN WHY DO PEOPLE HAVE TOILETS</that>
+<template>As people grow, they learn to use toilets to catch and hold their pee and poop.
+Every toilet catches and holds pee and poop that people don’t need anymore. People learn 
+to use toilets to catch and hold their pee and poop.</template>
+</category>
+<!-- toilets: End -->
+
+<!-- hands: Start -->
+<category>
+<pattern>YES</pattern>
+<that>DO YOU WANT TO LEARN WHY TO WASH YOUR HANDS</that>
+<template>Sometimes, my hands get dirty. My hands touch items with germs all day long. My hands
+touch doorknobs and pencils and many other things that have germs. I can’t see or feel the
+germs on my hands. That’s because germs are very, very tiny. Even though I can’t see germs,
+soap and water sends them away. Washing my hands is a healthy habit. </template>
+</category>
+
+<category>
+<pattern>YES</pattern>
+<that>DO YOU WANT TO LEARN WHY TO WASH YOUR HANDS</that>
+<template>Sometimes, my hands get dirty. My hands touch items with germs all day long. My hands
+touch doorknobs and pencils and many other things that have germs. I can’t see or feel the
+germs on my hands. That’s because germs are very, very tiny. Even though I can’t see germs,
+soap and water sends them away.
+This is a list of steps people follow when they wash their hands:
+1, Go to the sink.
+2, Turn the water on.
+3, Get hands wet.
+4, Put soap on hands.
+5, Rub hands together.
+6, Rinse hands with water.
+7, Turn the water off.
+8, Dry hands.
+Washing my hands is a healthy habit. I will try to follow these steps to wash my hands. </template>
+</category>
+<!-- hands: End -->
+
+<!-- teeth: Start -->
+<category><pattern>WHY BRUSH MY TEETH</pattern>
+<template> </template>
+</category>
+
+<category><pattern>HOW BRUSH MY TEETH</pattern>
+<template> </template>
+</category>
+<!-- teeth: End -->
+
+<!-- pipes: Start -->
+<category><pattern>TOILETS FLUSH TO THROW AWAY PEE AND POOP</pattern>
+<template>People learn to use toilets to catch and hold their pee and poop. They don’t need the pee and poop anymore, so they flush it away! Flushing is how a toilet throws away pee and poop that is no longer needed. Then the toilet is clear again. Flushing a toilet throws pee and (or) poop away.
+</template></category>
+
+<category><pattern>TOILETS PIPES AND WASTE TREATMENT PLANTS</pattern>
+<template>Toilets are fixtures that are attached to a pipe. Pee and poop move through the pipe to a factory called a waste treatment plant.In my house, toilets connect to pipes that lead to the waste treatment plant.</template>
+</category>
+<!-- pipes: End -->
+</aiml>

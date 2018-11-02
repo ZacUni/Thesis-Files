@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ip="192.168.19.224"
+
+python NAO_recordSpeak.py $ip
